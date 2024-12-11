@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speedy's Spicy Chili</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  <nav id="navbar">
+    <div id="nav-left">
+      <a href="#menus1">NOS MENUS</a>
+      <a href="#emplacements1">NOS EMPLACEMENTS</a>
+      <a href="#horaires1">NOS HORAIRES</a>
+    </div>
+    <div id="nav-center">
+      <a href="#home"><img src="images/LogoSite.png" alt="Logo" id="logo"></a>
+    </div>
+    <div id="nav-right">
+      <a href="#àproposdenous1">À PROPOS DE NOUS</a>
+      <a href="#nouscontacter1">NOUS CONTACTER</a>
+      <a href="SiteFoodTruck2.html#àproposdenous1"><img src="images/royaume-uni.png" alt="drapeauRU" id="drapeauRU"></a>
+      <a href="SiteFoodTruck.html#àproposdenous1"><img src="images/france.png" alt="drapeauFR" id="drapeauFR"></a>
+    </div>
+  </nav>
+
+  <!-- Logo/Accueil -->
+  <div id="home"></div>
+
+  <!-- Image de fond -->
+  <div id="background">
+    <img src="images/BackgroundImageTacos.jpg" alt="backgroundTacos">
+  </div>
+
+  <!-- Le slogan -->
+  <header id="slogan">
+    <h1>Des spécialités bien épicées !</h1>
+  </header>
+
+  <!-- Nos menus -->
+  <section id="menus1">
+    <h2>NOS MENUS :</h2>
+    
+    <section id="menu">
+      <h2>Nos Plats</h2>
+      <div class="platMenu">
+
+        <div class="platIcone">
+          <img src="images/tacoCarneAsada.jpg" alt="TacoCarne">
+          <h3>Taco carne asada : 6€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Tortillas de maïs, Bœuf mariné, Oignons, Coriandre, Salsa roja.</p>
+          </div>
+        </div>
+
+        <div class="platIcone">
+          <img src="images/tacoPollo.jpg" alt="TacoPollo">
+          <h3>Taco pollo : 5€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Tortilla de maïs, Poulet mariné, Guacamole, Fromage râpé, Salsa verde.</p>
+          </div>
+        </div>
+
+        <div class="platIcone">
+          <img src="images/burritoClassique.jpeg" alt="BurritoClassique">
+          <h3>Burrito classique : 8€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Tortilla de blé, Riz méxicain, Haricots noirs, Viande, Fromage, Crème.</p>
+          </div>
+        </div>
+
+        <div class="platIcone">
+          <img src="images/burritoVeggie.webp" alt="burritoVeggie">
+          <h3>burrito veggie : 7€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Tortilla de blé, Riz méxicain, Haricots noirs, Viande, Fromage, Crème.</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="boissons">
+      <h2>Nos Boissons</h2>
+      <div class="boissonsMenu">
+
+        <div class="boissonsIcone">
+          <img src="images/horchata.jpg" alt="horchata">
+          <h3>Horchata : 3€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Sucre et riz.</p>
+          </div>
+        </div>
+
+        <div class="boissonsIcone">
+          <img src="images/aguaDeJamaica.jpg" alt="aguaDeJamaica">
+          <h3>Agua de jamaica : 2,5€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Infusion d'hibiscus.</p>
+          </div>
+        </div>
+
+        <div class="boissonsIcone">
+          <img src="images/jarritos.jpg" alt="Sodasmexicain">
+          <h3>Sodas mexicain  : 2€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Coca-Cola ou Jarritos.</p>
+          </div>
+        </div>
+
+        <div class="boissonsIcone">
+          <img src="images/michelada.png" alt="michelada">
+          <h3>Michelada : 4,5€ / 5,5€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Avec alcool 4,5€ sans alcool 5,5€. Ingrédients : Jus de citron, Sauce Worcestershire, Piment, Épices.</p>
+          </div>
+        </div>
+
+        <div class="boissonsIcone">
+          <img src="images/LimodadeÀLaMexicaine.jpg" alt="limonade">
+          <h3>Limonade à la mexicaine : 3,5€</h3>
+          <button class="voir-plus">Voir plus</button>
+          <div class="ingredients">
+            <p>Ingrédients : Limonade, Menthe, Piment.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>  
+
+    <script>
+        let boutonsVoirPlus = document.querySelectorAll(".voir-plus");
+        
+        for (let i = 0; i < boutonsVoirPlus.length; i++) {
+          boutonsVoirPlus[i].addEventListener('click', function() {
+            let ingredientsDiv = this.nextElementSibling;
+            if (ingredientsDiv.style.display === "none" || !ingredientsDiv.style.display) {
+              ingredientsDiv.style.display = "block";
+            } else {
+              ingredientsDiv.style.display = "none";
+            }
+          });
+        }
+  </script>
+
+    <div id="voirCarte">
+      <a href="images/MenusTransparents.png">Voir la carte</a>
+    </div>
+
+  </section>
+
+  <!-- Nos emplacements -->
+  <section id="emplacements1">
+    <h2>NOS EMPLACEMENTS :</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1241.516066471076!2d-0.14406597226292978!3d51.5126264768165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052af9f75835%3A0xfbb9fe6deb513a3a!2sSt%20George%20St%2C%20London%2C%20Royaume-Uni!5e0!3m2!1sfr!2sfr!4v1732477423334!5m2!1sfr!2sfr" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Nous nous situons le plus souvent dans les alentours de la rue Saint George à Londres, un lieu marqué par la culture mexicaine. Pour savoir où nous sommes en temps réel, consultez nos réseaux sociaux.</p>
+  </section>
+
+  <!-- Nos horaires -->
+  <section id="horaires1">
+    <h2>NOS HORAIRES :</h2>
+    <div id="tableauHoraire"></div>
+
+    <script>
+      let tableau = [
+          ["", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+          ["Midi", "11h/14h", "11h/14h", "10h30/14h", "11h/14h", "11h/14h", "10h30/14h30", "fermé"],
+          ["Soir", "17h30/21h", "17h30/21h", "17h30/21h30", "17h30/21h", "17h30/21h", "17h/22h", "fermé"],
+      ];
+      let conteneur = document.getElementById("tableauHoraire");
+      let table = document.createElement("table");
+      tableau.forEach(function(row, index) {
+          let tr = document.createElement("tr");
+          row.forEach(function(cell) {
+              let cellElement = index === 0 ? document.createElement("th") : document.createElement("td");
+              cellElement.textContent = cell;
+              tr.appendChild(cellElement);
+          });
+          table.appendChild(tr);
+      });
+      conteneur.appendChild(table);
+    </script>
+    <p>Nous avons pratiquement les mêmes horaires chaque jour, sauf les jours spéciaux (mercredi et samedi) où nous restons ouverts plus longtemps pour vous accueillir à votre convenance !</p>
+  </section>
+
+  <!-- À propos de nous -->
+  <section id="àproposdenous1">
+    <h2>À PROPOS DE NOUS :</h2>
+    <h3>Some informations</h3>
+    <p>It's a Mexican food truck based in London near the Mexican embassy where we can serve you some "Xtremely" spicy Mexican dishes for pepper lovers !</p>
+    <h3>Our story</h3>
+    <p>My brother and i were born in London but our parents are from Mexico. We were raised in the Mexican culture, that's why we love a lot this type of food and we want to share it with anyone who wants. So, we decided to create our own restaurant, but as you can imagine, London is full of restaurants...but one day we heard about "Food Trucks". A way to realise our dreams even if we didn't have a fix place to build our restaurant. So, during the past few months, we have created the perfect Mexican food truck where you can eat our Mexican dishes made from our mother's famous recipes</p>
+    <h3>Our commitments</h3>
+    <p>We try our best to recycle the most we can, our bags and plates are made of recycled cardboard, we source from local producers and we have a minimalist menu to avoid waste.</p>
+  </section>
+
+  <!-- Nous contacter -->
+  <footer id="nouscontacter1">
+    <h2>NOUS CONTACTER :</h2>
+    <h4>Si vous souhaitez nous contacter ou simplement avoir plus d'informations :</h4>
+    <a href="NousContacter.html">Cliquez ici !</a>
+    <p>Copyright © 2024 Food Truck Speedy's Spicy Chili par Gabriel Chapron--Gardes</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* ça imite un scroll humain */
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(212,207,197,255);
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(212,207,197,255);
+    height: 120px;
+    z-index: 4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#nav-left, #nav-right {
+    display: flex;
+}
+#nav-center {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    z-index: 2;
+}
+#nav-left a, #nav-right a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+    z-index: 3;
+}
+#nav-left {
+    margin-left: 100px;
+    gap: 140px;
+}
+#nav-right {
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+#nav-left a:hover, #nav-right a:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+/* Logo */
+#logo {
+    transform: scale(1);
+    border-radius: 50%;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#logo:hover {
+    transform: scale(1.1);
+}
+
+/* Image de fond */
+#background {
+    z-index: 0;
+    filter: brightness(50%);
+}
+
+/* Slogan */
+#slogan {
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+}
+
+/* Sections générales */
+section {
+    margin: 100px 0;
+    padding-left: 7%;
+    scroll-margin-top: 180px; /* Sans ça on ne voyais pas le titre de chaque sections lors du scroll (ajoute un espace après le scroll) */
+}
+
+/* Section Menus */
+#menus1 h2{
+    font-size: 33px;
+}
+#menu {
+    text-align: center;
+    margin-left: -14%;
+}
+
+.platMenu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; /* Permet aux boîtes d’avoir des tailles différentes en fonction de leurs contenu */
+}
+  
+.platIcone {
+    display: flex;
+    flex-direction: column; /* ça aligne verticalement les objets a la manière d'une colone */
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s, 0.3s;
+}
+  
+.platIcone:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+  
+.platIcone img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.platIcone h3 {
+    font-size: 18px;
+    margin: 10px;
+}
+  
+.platIcone button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    transform: scale(0.95);
+}
+  
+.platIcone button:hover {
+    transform: scale(1);
+}
+
+.platIcone button:active{ /* comme un "hover" mais lors du clique */
+    background-color: darkred;
+}
+
+.ingredients {
+    display: none;
+    margin-top: 10px;
+    background-color: rgba(101,173,60,253);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+  
+.platIcone .voir-plus {
+    margin-top: 10px;
+}
+
+#boissons {
+    text-align: center;
+    margin-left: -14%;
+}
+.boissonsMenu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+.boissonsIcone {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s, 0.3s;
+}
+  
+.boissonsIcone:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+  
+.boissonsIcone img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.boissonsIcone h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+  
+.boissonsIcone button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    transform: scale(0.95);
+}
+  
+.boissonsIcone button:hover {
+    transform: scale(1);
+}
+
+.boissonsIcone button:active{ /* comme un "hover" mais lors du clique */
+    background-color: darkred;
+}
+  
+.boissonsIcone .voir-plus {
+    margin-top: 10px;
+}
+#voirCarte {
+    margin-top: -5%;
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    transform: scale(0.95);
+    position: absolute;
+}
+#voirCarte:hover {
+    transform: scale(1);
+}
+
+/* Section Emplacements */
+#emplacements1 h2 {
+    font-size: 33px;
+}
+#emplacements1 p {
+    width: 25%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: -25%;
+}
+#emplacements1 iframe {
+    border-radius: 1%;
+    border: 2px solid #ddd;
+    transform: scale(1.2);
+    margin-left: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Horaires */
+#horaires1 h2 {
+    font-size: 33px;
+    margin-bottom: 20px;
+    margin-top: 30%;
+}
+#horaires1 p {
+    font-size: 30px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+#horaires1 img {
+    margin-top: 20px;
+}
+
+/* Section Reserver */
+#reserver1 h2 {
+    font-size: 33px;
+}
+#reserver1 p{
+    font-size: 30px;
+}
+/* Tableau horraire */
+table {
+    width: 90%;
+    border-collapse: collapse; /* ça fusionne les bordures des cellules */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+/* Section À propos de nous */
+#àproposdenous1 h2 {
+    font-size: 33px;
+}
+#àproposdenous1 h3 {
+    font-size: 30px;
+    font-style: italic;
+}
+#àproposdenous1 p {
+    font-size: 30px;
+    width: 90%;
+}
+
+/* Nous Contacter */
+#nouscontacter1{
+    background-color: black;
+    color: white;
+}
+#nouscontacter1 h2 {
+    padding-left: 7%;
+    font-size: 33px;
+}
+#nouscontacter1 h4 {
+    font-size: 29px;
+    padding-left: 7%;
+    height: 100px;
+}
+#nouscontacter1 p { 
+    font-size: 10px;
+    margin-bottom: 0;
+    margin-left: 40%;
+}
+#nouscontacter1 a {
+    font-size: 33px;
+    border: solid red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: red;
+    transition: 0.3s;
+    position: absolute;
+    margin-left: 61%;
+    margin-top: -8%;
+    transform: scale(0.9);
+    transition:0.3s;
+}
+#nouscontacter1 a:hover{
+    transform: scale(1);
+}
